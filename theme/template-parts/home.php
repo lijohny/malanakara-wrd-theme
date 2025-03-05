@@ -17,7 +17,7 @@ get_header();
 			</video>
 			<div class="absolute top-0 left-0 z-10 w-full h-full bg-black opacity-80"></div> <!-- Overlay -->
 			<div class="absolute z-30 text-center text-white transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2">
-				<h1 class="mb-4 text-4xl">Your Content Here</h1>
+				<h1 class="mb-4 text-4xl">bfjvberwjYour Content Here</h1>
 				<p class="text-lg">This content will appear on top of the video.</p>
 			</div>
 		</div>
