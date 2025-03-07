@@ -9,49 +9,75 @@
 
 ?>
 <style>
-	.menu-lister ul{
+	.menu-lister ul {
 		display: flex;
 		justify-content: space-around;
 		list-style-type: none;
 		gap: 1rem;
 	}
+
+	/* Base styles for navbar */
+	#masthead {
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		background-color: white; /* Make it transparent initially */
+		transition: all 0.3s ease-in-out;
+		z-index: 1000;
+	}
+
+	/* Shadow and background blur effect when scrolled */
+	.nav-shadow {
+		box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+		background-color: #00000082 !important;
+		backdrop-filter: blur(10px); /* Apply blur */
+	}
+
+	/* Logo visibility */
+	.white-logo {
+		display: none; /* Initially hidden */
+	}
+
+	.nav-shadow .white-logo {
+		display: block; /* Show white logo when scrolled */
+	}
+
+	.nav-shadow .default-logo {
+		display: none; /* Hide default logo when scrolled */
+	}
 </style>
-<header id="masthead">
 
-	<div class="flex justify-between items-center w-full px-4 py-2 text-black">
-		<div>
-			<?php
-			if ( is_front_page() ) :
-				?>
-				<h1><?php bloginfo( 'name' ); ?></h1>
-				<?php
-			else :
-				?>
-				<p><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
-				<?php
-			endif;
+<header id="masthead" class="transition-all duration-300">
+	<div class="flex justify-between items-center w-full text-white">
+		<div class="container mx-auto px-24 py-2">
+			<div>
+				<!-- Default Logo (Visible at top, hidden when scrolled) -->
+				<a href="<?php echo esc_url(home_url('/')); ?>" class="default-logo">
+					<img class="w-[300px]" src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/stmarrys-logo.png'); ?>" alt="<?php bloginfo('name'); ?>">
+				</a>
 
-			$stmarys_description = get_bloginfo( 'description', 'display' );
-			if ( $stmarys_description || is_customize_preview() ) :
-				?>
-				<p><?php echo $stmarys_description; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></p>
-			<?php endif; ?>
+				<!-- White Logo (Hidden at top, shown when scrolled) -->
+				<a href="<?php echo esc_url(home_url('/')); ?>" class="white-logo">
+					<img class="w-[200px]" src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/stmarrys-logowhite.png'); ?>" alt="<?php bloginfo('name'); ?>">
+				</a>
+			</div>
 		</div>
-
-		<nav id="site-navigation" class="flex justify-around gap-5 items-center" aria-label="<?php esc_attr_e( 'Main Navigation', 'st-marys' ); ?>">
-			<?php
-				wp_nav_menu(
-					array(
-						'theme_location' => 'menu-1',
-						'menu_id'        => 'primary-menu',
-						'menu_class'     => 'menu-lister', // This applies to <ul> automatically
-						'items_wrap'     => '<ul id="%1$s" class="%2$s" aria-label="submenu">%3$s</ul>', 
-					)
-					
-					
-				);
-			?>
-		</nav>
 	</div>
-
 </header>
+
+<script>
+	document.addEventListener("DOMContentLoaded", function () {
+		let navbar = document.getElementById("masthead");
+
+		window.addEventListener("scroll", function () {
+			let currentScroll = window.scrollY;
+
+			if (currentScroll > 50) {
+				navbar.classList.add("nav-shadow"); // Add blur effect
+			} else {
+				navbar.classList.remove("nav-shadow"); // Remove blur effect
+			}
+		});
+	});
+</script>
