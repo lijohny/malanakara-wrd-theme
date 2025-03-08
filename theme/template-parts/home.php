@@ -22,6 +22,10 @@ get_header();
 		animation: rotateAnimation 100s linear infinite;
 	}
 
+	.leftrightcard{
+		font-weight: 700;
+	}
+
 	@keyframes rotateAnimation {
 		0% {
 			transform: rotate(0deg);
@@ -67,25 +71,25 @@ get_header();
 		</section>
 
 		<div class="relative">
-			<img class="absolute top-[-10%]" src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/satueredproperring.png'); ?>" alt="ring image">
+			<img class="absolute top-[-10%]" src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/properring.png'); ?>" alt="ring image">
 
 			<section class="my-[90px] z-10 relative">
 				<div class="container mx-auto px-24">
 					<div class="grid grid-cols-2 gap-10 items-start">
 						<!-- Left Image -->
 						<div id="left-item-1">
-							<img src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/dentcareimage.jpg'); ?>"  alt="Nature Image" class="w-full rounded-lg shadow-lg">
+							<img src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/newdentcareimage.jpg'); ?>"  alt="Nature Image" class="w-full rounded-lg shadow-lg">
 						</div>
 						<!-- Right Text -->
 						<div id="right-item-1" class="text-gray-800">
-							<p class="mb-4">
+							<p class="leftrightcard mb-4">
 								Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.
 								Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.
 								Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.
 								Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.
 								Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.
 							</p>
-							<p class="mb-4">
+							<p class="leftrightcard mb-4">
 								Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.
 								Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.
 								Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.
@@ -101,14 +105,14 @@ get_header();
 					<div class="grid grid-cols-2 gap-10 items-start">
 						<!-- Left Text -->
 						<div id="left-item-2" class="text-gray-800">
-							<p class="mb-4">
+							<p class="mb-4 leftrightcard">
 								Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.
 								Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.
 								Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.
 								Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.
 								Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.
 							</p>
-							<p class="mb-4">
+							<p class="mb-4 leftrightcard">
 								Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.
 								Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.
 								Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.
@@ -127,44 +131,91 @@ get_header();
 			<section class="bg-white py-16 z-10 relative">
 				<div class="container mx-auto px-24 text-center">
 
-				<div class="flex items-center justify-between space-x-10 text-center py-10">
-					<!-- <div class="rotate-container">
-						<img class="" src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/globe.svg'); ?>" alt="ring image">
-					</div> -->
+					<div class="flex items-center justify-between space-x-10 text-center py-10">
+						<!-- <div class="rotate-container">
+							<img class="" src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/globe.svg'); ?>" alt="ring image">
+						</div> -->
 
-					<div class="rotate-container mr-36">
-						<img class="w-[291px] h-[291px] sm:w-[330px] sm:h-[330px] lg:w-[370px] lg:h-[370px] xl:h-[414px] xl:w-[414px] 2xl:w-[446.01px] 2xl:h-[446.01px] 3xl:h-[477px] 3xl:w-[477px] absolute left-[-129px] sm:left-[-129px] lg:left-[-149px] xl:left-[-171px] 3xl:left-[-184px]"
-							src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/globe.svg'); ?>" 
-							alt="globe">
+						<div class="rotate-container mr-36">
+							<img class="w-[291px] h-[291px] sm:w-[330px] sm:h-[330px] lg:w-[370px] lg:h-[370px] xl:h-[414px] xl:w-[414px] 2xl:w-[446.01px] 2xl:h-[446.01px] 3xl:h-[477px] 3xl:w-[477px] absolute left-[-129px] sm:left-[-129px] lg:left-[-149px] xl:left-[-171px] 3xl:left-[-184px]"
+								src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/globe.svg'); ?>" 
+								alt="globe">
+						</div>
+
+
+						<div class=" flex flex-col" id="stat1">						
+							<h2 class="text-7xl font-bold number" data-value="10">0+</h2>
+							<p class="text-gray-500 text-2xl">Year's</p>
+						</div>
+
+						<div class="" id="stat2">
+							<h2 class="text-7xl font-bold number" data-value="200">0+</h2>
+							<p class="text-gray-500 text-2xl">Charity's</p>
+						</div>
+
+						<div class="" id="stat3">
+							<h2 class="text-7xl font-bold number" data-value="200">0+</h2>
+							<p class="text-gray-500 text-2xl">People</p>
+						</div>
+
+						<div class="" id="stat4">
+							<h2 class="text-7xl font-bold number" data-value="50">0+</h2>
+							<p class="text-gray-500 text-2xl">Technologies</p>
+						</div>
 					</div>
-
-
-					<div class=" flex flex-col" id="stat1">						
-						<h2 class="text-7xl font-bold number" data-value="10">0+</h2>
-						<p class="text-gray-500 text-2xl">Year's</p>
-					</div>
-
-					<div class="" id="stat2">
-						<h2 class="text-7xl font-bold number" data-value="200">0+</h2>
-						<p class="text-gray-500 text-2xl">Charity's</p>
-					</div>
-
-					<div class="" id="stat3">
-						<h2 class="text-7xl font-bold number" data-value="200">0+</h2>
-						<p class="text-gray-500 text-2xl">People</p>
-					</div>
-
-					<div class="" id="stat4">
-						<h2 class="text-7xl font-bold number" data-value="50">0+</h2>
-						<p class="text-gray-500 text-2xl">Technologies</p>
-					</div>
-				</div>
-
 
 				</div>
 			</section>
 
-			<section class="bg-white py-16 z-10 relative">
+			<section class="mb-16 mt-28 z-10 relative">
+				<div class="container mx-auto px-24 text-center">
+
+					<div class="flex items-start gap-10">
+						<div class="relative w-64 h-96 rounded-3xl overflow-hidden shadow-lg">
+							<img src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/Selfie.jpg'); ?>" alt="Profile Background" class="absolute inset-0 w-full h-full object-cover">
+							<div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent"></div>
+							<div class="absolute bottom-4 left-4 text-white">
+								<h3 class="text-lg font-semibold text-left">Lijo Johney</h3>
+								<p class="text-sm font-medium text-left">6yr member</p>
+								<p class="text-xs opacity-80 text-left">member of youth</p>
+							</div>
+						</div>
+
+						<div class="relative w-64 h-96 rounded-3xl overflow-hidden shadow-lg">
+							<img src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/secSelfie.jpg'); ?>" alt="Profile Background" class="absolute inset-0 w-full h-full object-cover">
+							<div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent"></div>
+							<div class="absolute bottom-4 left-4 text-white">
+								<h3 class="text-lg font-semibold text-left">Lijo Johney</h3>
+								<p class="text-sm font-medium text-left">6yr member</p>
+								<p class="text-xs opacity-80 text-left">member of youth</p>
+							</div>
+						</div>
+
+						<div class="relative w-64 h-96 rounded-3xl overflow-hidden shadow-lg">
+							<img src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/thirdSelfie.jpg'); ?>" alt="Profile Background" class="absolute inset-0 w-full h-full object-cover">
+							<div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent"></div>
+							<div class="absolute bottom-4 left-4 text-white">
+								<h3 class="text-lg font-semibold text-left">Ajith</h3>
+								<p class="text-sm font-medium text-left">6yr member</p>
+								<p class="text-xs opacity-80 text-left">member of youth</p>
+							</div>
+						</div>
+
+						<div class="relative w-64 h-96 rounded-3xl overflow-hidden shadow-lg">
+							<img src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/fourthSelfie.jpg'); ?>" alt="Profile Background" class="absolute inset-0 w-full h-full object-cover">
+							<div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent"></div>
+							<div class="absolute bottom-4 left-4 text-white">
+								<h3 class="text-lg font-semibold text-left">Ajo</h3>
+								<p class="text-sm font-medium text-left">6yr member</p>
+								<p class="text-xs opacity-80 text-left">member of youth</p>
+							</div>
+						</div>
+					</div>
+
+				</div>
+			</section>
+
+			<section class="bg-white my-16 z-10 relative">
 				<div class="container mx-auto px-24 text-center">
 					<!-- Heading -->
 					<h2 class="text-4xl font-bold text-gray-900 flex justify-center items-center gap-2">
@@ -184,7 +235,7 @@ get_header();
 								<img src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/church-logo.png'); ?>"  class="w-12 h-12" alt="Location Icon">
 							</div>
 							<h3 class="text-xl font-semibold text-gray-800 mt-4">OUR CHURCH</h3>
-							<p class="text-gray-600 mt-2">
+							<p class="text-blue-950 mt-2">
 							St Mary's Malankara Syriac Catholic <br>
 							Church Kallamam,<br>
 							Veeranakavu, trivandrum Kerala 695572
@@ -198,7 +249,7 @@ get_header();
 								<img src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/gmail-logo.png'); ?>" class="h-12" alt="Mail Icon">
 							</div>
 							<h3 class="text-xl font-semibold text-gray-800 mt-4">OUR MAIL</h3>
-							<p class="text-gray-600 mt-2">kallamamst.marysmalankaracath@gmail.com</p>
+							<p class="text-blue-950 mt-2">kallamamst.marysmalankaracath@gmail.com</p>
 						</div>
 
 						<!-- Phone -->
@@ -208,7 +259,7 @@ get_header();
 								<img src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/phone-logo.png'); ?>" class="w-12 h-12" alt="Phone Icon">
 							</div>
 							<h3 class="text-xl font-semibold text-gray-800 mt-4">OUR PHONE</h3>
-							<p class="text-gray-600 mt-2">0484 485 1114</p>
+							<p class="text-blue-950 mt-2">0484 485 1114</p>
 						</div>
 
 					</div>
@@ -265,11 +316,11 @@ get_header();
 
 		// Animate Left Items
 		gsap.fromTo("#left-item-1", 
-			{ x: -600, opacity: 0 }, 
+			{ x: -300, opacity: 0 }, 
 			{ 
 				x: 0, 
 				opacity: 1, 
-				duration: 4, 
+				duration: 2, 
 				ease: "power3.out",
 				scrollTrigger: {
 					trigger: "#left-item-1",
@@ -281,11 +332,11 @@ get_header();
 
 		// Animate Left Items
 		gsap.fromTo("#left-item-2", 
-			{ x: -600, opacity: 0 }, 
+			{ x: -300, opacity: 0 }, 
 			{ 
 				x: 0, 
 				opacity: 1, 
-				duration: 4, 
+				duration: 2, 
 				ease: "power3.out",
 				scrollTrigger: {
 					trigger: "#left-item-2",
