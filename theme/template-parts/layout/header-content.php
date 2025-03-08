@@ -62,6 +62,23 @@
 					<img class="w-[200px]" src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/stmarrys-logowhite.png'); ?>" alt="<?php bloginfo('name'); ?>">
 				</a>
 			</div>
+
+			<div>
+			<?php
+wp_nav_menu(array(
+    'theme_location' => 'header-menu', // Now it matches
+    'container'      => 'nav',
+    'container_class'=> 'header-nav',
+    'menu_class'     => 'flex gap-4',
+    'fallback_cb'    => false
+));
+?>
+
+
+
+			</div>
+
+
 		</div>
 	</div>
 </header>

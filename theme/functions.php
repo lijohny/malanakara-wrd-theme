@@ -80,10 +80,19 @@ if ( ! function_exists( 'stmarys_setup' ) ) :
 		// This theme uses wp_nav_menu() in two locations.
 		register_nav_menus(
 			array(
-				'menu-1' => __( 'Primary', 'st-marys' ),
-				'menu-2' => __( 'Footer Menu', 'st-marys' ),
+				'header-menu' => __( 'Header Menu', 'st-marys' ), // Rename it to 'header-menu'
+				'footer-menu' => __( 'Footer Menu', 'st-marys' ),
 			)
 		);
+		
+
+		// function register_custom_menus() {
+		// 	register_nav_menus(array(
+		// 		'header-menu' => __('Header Menu', 'your-theme-textdomain')
+		// 	));
+		// }
+		// add_action('after_setup_theme', 'register_custom_menus');
+		
 
 		/*
 		 * Switch default core markup for search form, comment form, and comments
@@ -154,10 +163,22 @@ function stmarys_scripts() {
 }
 add_action( 'wp_enqueue_scripts', 'stmarys_scripts' );
 
-function theme_enqueue_styles() {
-    wp_enqueue_style('custom-css', get_template_directory_uri() . '/assets/css/custom.css','all'); 
+function theme_enqueue_assets() {
+	wp_enqueue_style('custom-css', get_template_directory_uri() . '/assets/css/custom.css', array(), '1.0', 'all');
+    // Swiper CSS
+    wp_enqueue_style('swiper-css', 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css', array(), '11.0', 'all');
+
+    // Swiper JS
+    wp_enqueue_script('swiper-js', 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js', array(), '11.0', true);
+
+    // Custom JS for Swiper
+    wp_enqueue_script('custom-swiper-init', get_template_directory_uri() . '/assets/js/custom-swiper.js', array('swiper-js'), '1.0', true);
 }
-add_action('wp_enqueue_scripts', 'theme_enqueue_styles');
+add_action('wp_enqueue_scripts', 'theme_enqueue_assets');
+
+
+
+
 
 
 /**
