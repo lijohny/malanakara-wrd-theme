@@ -7,37 +7,368 @@
 
 get_header();
 ?>
+<style>
+    .hidden-letter {
+        opacity: 0;
+        display: inline-block;
+    }
+	.rotate-container {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
 
-<main id="main">
+	.rotate-container img {
+		animation: rotateAnimation 100s linear infinite;
+	}
 
-	<section id="primary" class="relative h-[100vh] mt-[90px]">
-		
-		<!-- Video Background -->
-		<video autoplay loop muted playsinline class="absolute top-0 left-0 w-full h-full object-cover aspect-video z-[-1]">
-			<source src="<?php echo esc_url(get_template_directory_uri() . '/assets/churchvideoplayback.mp4'); ?>" type="video/mp4">
-			Your browser does not support the video tag.
-		</video>
+	@keyframes rotateAnimation {
+		0% {
+			transform: rotate(0deg);
+		}
+		100% {
+			transform: rotate(360deg);
+		}
+	}
 
-		<!-- Overlay -->
-		<div class="absolute top-0 left-0 w-full h-full bg-black opacity-65"></div>
+</style>
 
-		<div class="container mx-auto px-24 flex justify-center items-center h-full relative">
-			<h1 id="animated-heading" class="mb-4 text-6xl text-white opacity-0">
-				<?php the_field('home_banner_text'); ?>
-			</h1>
-			<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae consectetur obcaecati vel repudiandae dicta tenetur veniam nemo nihil. Maiores fugiat atque nulla, alias magnam fuga quidem nihil hic eos eius?</p>
+<main id="main" class="overflow-x-hidden">
+	<div id="primary">
+		<section  class="relative h-[100vh] mt-[90px]">
+			
+			<!-- Video Background -->
+			<video autoplay loop muted playsinline class="absolute top-0 left-0 w-full h-full object-cover aspect-video z-[-1]">
+				<source src="<?php echo esc_url(get_template_directory_uri() . '/assets/churchvideoplayback.mp4'); ?>" type="video/mp4">
+				Your browser does not support the video tag.
+			</video>
+
+			<!-- Overlay -->
+			<div class="absolute top-0 left-0 w-full h-full bg-black opacity-85"></div>
+
+			<div class="container mx-auto px-24 flex justify-center items-center h-full relative z-50 !flex-col text-center">
+
+				<!-- Heading Animation -->
+				<?php $home_banner = get_field('home_banner');
+
+				if ($home_banner): ?>
+					<h1 id="animated-heading" class="mb-4 text-6xl text-white w-[70%] opacity-0">
+						<?php echo esc_html($home_banner['home_banner_first_heading']); ?>
+						<span class="text-xl block mt-2"><?php echo esc_html($home_banner['home_banner_sub_small_heading']); ?></span>
+					</h1>
+				<?php endif; ?>
+
+
+				<!-- Paragraph Animation -->
+				<p id="animated-paragraph" class="text-white text-xl w-[70%]">
+					Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae consectetur obcaecati vel repudiandae dicta  tenetur veniam nemo nihil. Maiores fugiat atque nulla, alias magnam fuga quidem nihil hic eos eius?
+				</p>
+			</div>
+		</section>
+
+		<div class="relative">
+			<img class="absolute top-[-10%]" src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/satueredproperring.png'); ?>" alt="ring image">
+
+			<section class="my-[90px] z-10 relative">
+				<div class="container mx-auto px-24">
+					<div class="grid grid-cols-2 gap-10 items-start">
+						<!-- Left Image -->
+						<div id="left-item-1">
+							<img src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/dentcareimage.jpg'); ?>"  alt="Nature Image" class="w-full rounded-lg shadow-lg">
+						</div>
+						<!-- Right Text -->
+						<div id="right-item-1" class="text-gray-800">
+							<p class="mb-4">
+								Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.
+								Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.
+								Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.
+								Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.
+								Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.
+							</p>
+							<p class="mb-4">
+								Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.
+								Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.
+								Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.
+							</p>
+							
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section class="my-[90px] z-10 relative">
+				<div class="container mx-auto px-24">
+					<div class="grid grid-cols-2 gap-10 items-start">
+						<!-- Left Text -->
+						<div id="left-item-2" class="text-gray-800">
+							<p class="mb-4">
+								Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.
+								Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.
+								Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.
+								Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.
+								Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.
+							</p>
+							<p class="mb-4">
+								Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.
+								Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.
+								Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.
+							</p>
+							
+						</div>
+
+						<!-- Right Image -->
+						<div id="right-item-2">
+							<img src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/dentcareimage.jpg'); ?>"  alt="Nature Image" class="w-full rounded-lg shadow-lg">
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section class="bg-white py-16 z-10 relative">
+				<div class="container mx-auto px-24 text-center">
+
+				<div class="flex items-center justify-between space-x-10 text-center py-10">
+					<!-- <div class="rotate-container">
+						<img class="" src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/globe.svg'); ?>" alt="ring image">
+					</div> -->
+
+					<div class="rotate-container mr-36">
+						<img class="w-[291px] h-[291px] sm:w-[330px] sm:h-[330px] lg:w-[370px] lg:h-[370px] xl:h-[414px] xl:w-[414px] 2xl:w-[446.01px] 2xl:h-[446.01px] 3xl:h-[477px] 3xl:w-[477px] absolute left-[-129px] sm:left-[-129px] lg:left-[-149px] xl:left-[-171px] 3xl:left-[-184px]"
+							src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/globe.svg'); ?>" 
+							alt="globe">
+					</div>
+
+
+					<div class=" flex flex-col" id="stat1">						
+						<h2 class="text-7xl font-bold number" data-value="10">0+</h2>
+						<p class="text-gray-500 text-2xl">Year's</p>
+					</div>
+
+					<div class="" id="stat2">
+						<h2 class="text-7xl font-bold number" data-value="200">0+</h2>
+						<p class="text-gray-500 text-2xl">Charity's</p>
+					</div>
+
+					<div class="" id="stat3">
+						<h2 class="text-7xl font-bold number" data-value="200">0+</h2>
+						<p class="text-gray-500 text-2xl">People</p>
+					</div>
+
+					<div class="" id="stat4">
+						<h2 class="text-7xl font-bold number" data-value="50">0+</h2>
+						<p class="text-gray-500 text-2xl">Technologies</p>
+					</div>
+				</div>
+
+
+				</div>
+			</section>
+
+			<section class="bg-white py-16 z-10 relative">
+				<div class="container mx-auto px-24 text-center">
+					<!-- Heading -->
+					<h2 class="text-4xl font-bold text-gray-900 flex justify-center items-center gap-2">
+						Get in Touch 
+						<span>🤝</span> 
+						<span>📧</span> 
+						<span>📞</span>
+					</h2>
+
+					<!-- Contact Boxes -->
+					<div  class="grid contact-box-container grid-cols-1 md:grid-cols-3 gap-8 mt-10">
+						
+						<!-- Office Location -->
+						<div class="border contact-card border-gray-300 p-8 rounded-lg shadow-lg">
+							<div class="flex justify-center">
+								<!-- Add your SVG icon here -->
+								<img src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/church-logo.png'); ?>"  class="w-12 h-12" alt="Location Icon">
+							</div>
+							<h3 class="text-xl font-semibold text-gray-800 mt-4">OUR CHURCH</h3>
+							<p class="text-gray-600 mt-2">
+							St Mary's Malankara Syriac Catholic <br>
+							Church Kallamam,<br>
+							Veeranakavu, trivandrum Kerala 695572
+							</p>
+						</div>
+
+						<!-- Email -->
+						<div class="border contact-card border-gray-300 p-8 rounded-lg shadow-lg">
+							<div class="flex justify-center">
+								<!-- Add your SVG icon here -->
+								<img src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/gmail-logo.png'); ?>" class="h-12" alt="Mail Icon">
+							</div>
+							<h3 class="text-xl font-semibold text-gray-800 mt-4">OUR MAIL</h3>
+							<p class="text-gray-600 mt-2">kallamamst.marysmalankaracath@gmail.com</p>
+						</div>
+
+						<!-- Phone -->
+						<div class="border contact-card border-gray-300 p-8 rounded-lg shadow-lg">
+							<div class="flex justify-center">
+								<!-- Add your SVG icon here -->
+								<img src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/phone-logo.png'); ?>" class="w-12 h-12" alt="Phone Icon">
+							</div>
+							<h3 class="text-xl font-semibold text-gray-800 mt-4">OUR PHONE</h3>
+							<p class="text-gray-600 mt-2">0484 485 1114</p>
+						</div>
+
+					</div>
+				</div>
+			</section>
 		</div>
+	</div>
+</main>
 
-	</section>
+<!-- GSAP Library -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
 
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        // GSAP Animation for Heading
+        gsap.fromTo("#animated-heading", 
+            { y: 100, opacity: 0 }, 
+            { y: 0, opacity: 1, duration: 1.5, ease: "power3.out" }
+        );
 
+        // Get the paragraph
+        let paragraph = document.querySelector("#animated-paragraph");
 
-	<!-- <section id="primary" class="h-screen">
-		<div class="container mx-auto px-24">
-			<h1 class="mb-4 text-6xl"><?php the_field('home_banner_text'); ?></h1>
-		</div>
-	</section> -->
+        if (!paragraph) return;
 
-	</main>
-<?php
-get_footer();
+        let words = paragraph.innerText.split(" "); // Split paragraph into words
+        paragraph.innerHTML = ""; // Clear paragraph text
+
+        // Reconstruct paragraph with span-wrapped words
+        words.forEach(word => {
+            let wordSpan = document.createElement("span");
+            wordSpan.style.display = "inline-block"; // Ensure inline effect
+            wordSpan.style.opacity = "0"; // Hide initially
+            wordSpan.textContent = word + " "; // Add space between words
+            paragraph.appendChild(wordSpan);
+        });
+
+        // Animate each word when scrolled into view
+        gsap.to("#animated-paragraph span", {
+            scrollTrigger: {
+                trigger: paragraph,
+                start: "top 80%", // Starts animation when 80% visible
+                toggleActions: "play none none none"
+            },
+            opacity: 1,
+            y: 0,
+            stagger: 0.1, // Stagger each word by 0.1s
+            duration: 0.8,
+            ease: "power3.out"
+        });
+
+		gsap.registerPlugin(ScrollTrigger);
+
+		// Animate Left Items
+		gsap.fromTo("#left-item-1", 
+			{ x: -600, opacity: 0 }, 
+			{ 
+				x: 0, 
+				opacity: 1, 
+				duration: 4, 
+				ease: "power3.out",
+				scrollTrigger: {
+					trigger: "#left-item-1",
+					start: "top 80%",
+					toggleActions: "play reverse play reverse" 
+				}
+			}
+		);
+
+		// Animate Left Items
+		gsap.fromTo("#left-item-2", 
+			{ x: -600, opacity: 0 }, 
+			{ 
+				x: 0, 
+				opacity: 1, 
+				duration: 4, 
+				ease: "power3.out",
+				scrollTrigger: {
+					trigger: "#left-item-2",
+					start: "top 80%",
+					toggleActions: "play reverse play reverse" 
+				}
+			}
+		);
+
+		// Animate Right Items
+		gsap.fromTo("#right-item-1", 
+			{ x: 100, opacity: 0 }, 
+			{ 
+				x: 0, 
+				opacity: 1, 
+				duration: 2, 
+				ease: "power3.out",
+				scrollTrigger: {
+					trigger: "#right-item-1",
+					start: "top 80%",
+					toggleActions: "play reverse play reverse" 
+				}
+			}
+		);
+
+		// Animate Right Items
+		gsap.fromTo("#right-item-2", 
+			{ x: 100, opacity: 0 }, 
+			{ 
+				x: 0, 
+				opacity: 1, 
+				duration: 2, 
+				ease: "power3.out",
+				scrollTrigger: {
+					trigger: "#right-item-2",
+					start: "top 80%",
+					toggleActions: "play reverse play reverse" 
+				}
+			}
+		);
+
+		gsap.fromTo(".contact-card",
+			{ opacity: 0, y: 50 },
+			{
+				opacity: 1, 
+				y: 0,
+				duration: 1,
+				ease: "power3.out",
+				stagger: 0.2, 
+				scrollTrigger: {
+					trigger: ".contact-box-container",
+					start: "top 80%", 
+					toggleActions: "play reverse play reverse"
+
+				}
+			}
+		);
+
+		const stats = document.querySelectorAll(".number");
+
+		stats.forEach((stat, index) => {
+			let targetValue = parseInt(stat.dataset.value, 10); // Convert data-value to integer
+
+			gsap.fromTo(stat, 
+				{ textContent: 0 }, 
+				{ 
+					textContent: targetValue, 
+					duration: 2, 
+					ease: "power1.out",
+					delay: index * 0.3,
+					scrollTrigger: {
+						trigger: stat,
+						start: "top 80%",
+						toggleActions: "play reverse play reverse" 
+					},
+					onUpdate: function () {
+						stat.innerText = Math.floor(this.targets()[0].textContent) + "+"; // Update text dynamically
+					}
+				}
+			);
+		});
+
+    });
+</script>
+
+<?php get_footer(); ?>

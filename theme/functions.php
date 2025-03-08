@@ -154,6 +154,12 @@ function stmarys_scripts() {
 }
 add_action( 'wp_enqueue_scripts', 'stmarys_scripts' );
 
+function theme_enqueue_styles() {
+    wp_enqueue_style('custom-css', get_template_directory_uri() . '/assets/css/custom.css','all'); 
+}
+add_action('wp_enqueue_scripts', 'theme_enqueue_styles');
+
+
 /**
  * Enqueue the block editor script.
  */
