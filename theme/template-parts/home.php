@@ -178,105 +178,38 @@ get_header();
 					<div class="mb-16 text-left flex justify-start items-start">
 						<h2 class="text-4xl font-bold text-gray-900 flex justify-center items-center gap-2">Our Backbones <span>💪</span></h2>
 					</div>
-					<div class="swiper-container mySwiper h-[450px]">
-						<div class="swiper-wrapper h-full">
-							<!-- Card 1 -->
-							<div class="swiper-slide relative w-64 h-96 rounded-3xl overflow-hidden shadow-lg">
-								<img src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/Selfie.jpg'); ?>" 
-									alt="Profile Background" class="absolute inset-0 w-full h-full object-cover">
-								<div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent"></div>
-								<div class="absolute bottom-4 left-4 text-white">
-									<h3 class="text-lg font-semibold">Lijo Johney</h3>
-									<p class="text-sm font-medium">6yr member</p>
-									<p class="text-xs opacity-80">Member of youth</p>
-								</div>
-							</div>
 
-							<!-- Card 2 -->
-							<div class="swiper-slide relative w-64 h-96 rounded-3xl overflow-hidden shadow-lg">
-								<img src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/secSelfie.jpg'); ?>" 
-									alt="Profile Background" class="absolute inset-0 w-full h-full object-cover">
-								<div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent"></div>
-								<div class="absolute bottom-4 left-4 text-white">
-									<h3 class="text-lg font-semibold">Lijo Johney</h3>
-									<p class="text-sm font-medium">6yr member</p>
-									<p class="text-xs opacity-80">Member of youth</p>
-								</div>
-							</div>
-
-							<!-- Card 3 -->
-							<div class="swiper-slide relative w-64 h-96 rounded-3xl overflow-hidden shadow-lg">
-								<img src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/thirdSelfie.jpg'); ?>" 
-									alt="Profile Background" class="absolute inset-0 w-full h-full object-cover">
-								<div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent"></div>
-								<div class="absolute bottom-4 left-4 text-white">
-									<h3 class="text-lg font-semibold">Ajith</h3>
-									<p class="text-sm font-medium">6yr member</p>
-									<p class="text-xs opacity-80">Member of youth</p>
-								</div>
-							</div>
-
-							<!-- Card 4 -->
-							<div class="swiper-slide relative w-64 h-96 rounded-3xl overflow-hidden shadow-lg">
-								<img src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/fourthSelfie.jpg'); ?>" 
-									alt="Profile Background" class="absolute inset-0 w-full h-full object-cover">
-								<div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent"></div>
-								<div class="absolute bottom-4 left-4 text-white">
-									<h3 class="text-lg font-semibold">Ajo</h3>
-									<p class="text-sm font-medium">6yr member</p>
-									<p class="text-xs opacity-80">Member of youth</p>
-								</div>
-							</div>
-
-							<!-- Card 1 -->
-							<div class="swiper-slide relative w-64 h-96 rounded-3xl overflow-hidden shadow-lg">
-								<img src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/Selfie.jpg'); ?>" 
-									alt="Profile Background" class="absolute inset-0 w-full h-full object-cover">
-								<div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent"></div>
-								<div class="absolute bottom-4 left-4 text-white">
-									<h3 class="text-lg font-semibold">Lijo Johney</h3>
-									<p class="text-sm font-medium">6yr member</p>
-									<p class="text-xs opacity-80">Member of youth</p>
-								</div>
-							</div>
-
-							<!-- Card 2 -->
-							<div class="swiper-slide relative w-64 h-96 rounded-3xl overflow-hidden shadow-lg">
-								<img src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/secSelfie.jpg'); ?>" 
-									alt="Profile Background" class="absolute inset-0 w-full h-full object-cover">
-								<div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent"></div>
-								<div class="absolute bottom-4 left-4 text-white">
-									<h3 class="text-lg font-semibold">Lijo Johney</h3>
-									<p class="text-sm font-medium">6yr member</p>
-									<p class="text-xs opacity-80">Member of youth</p>
-								</div>
-							</div>
-
-							<!-- Card 3 -->
-							<div class="swiper-slide relative w-64 h-96 rounded-3xl overflow-hidden shadow-lg">
-								<img src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/thirdSelfie.jpg'); ?>" 
-									alt="Profile Background" class="absolute inset-0 w-full h-full object-cover">
-								<div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent"></div>
-								<div class="absolute bottom-4 left-4 text-white">
-									<h3 class="text-lg font-semibold">Ajith</h3>
-									<p class="text-sm font-medium">6yr member</p>
-									<p class="text-xs opacity-80">Member of youth</p>
-								</div>
-							</div>
-
-							<!-- Card 4 -->
-							<div class="swiper-slide relative w-64 h-96 rounded-3xl overflow-hidden shadow-lg">
-								<img src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/fourthSelfie.jpg'); ?>" 
-									alt="Profile Background" class="absolute inset-0 w-full h-full object-cover">
-								<div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent"></div>
-								<div class="absolute bottom-4 left-4 text-white">
-									<h3 class="text-lg font-semibold">Ajo</h3>
-									<p class="text-sm font-medium">6yr member</p>
-									<p class="text-xs opacity-80">Member of youth</p>
-								</div>
+					<?php if( have_rows('slider_wrapper') ): ?>
+						<div class="swiper-container mySwiper h-[450px]">
+							<div class="swiper-wrapper h-full">
+							<?php while ( have_rows('slider_wrapper') ): the_row(); 
+							// Get subfield data from repeater
+							$image = get_sub_field('slider_people_image');
+							$name = get_sub_field('slider-name');
+							$position = get_sub_field('slider_people_position');
+							$year = get_sub_field('slider_year');
+							?>
+									<div class="swiper-slide relative w-64 h-96 rounded-3xl overflow-hidden shadow-lg">
+										<!-- Check if the image exists and display it -->
+										<?php if( $image ): ?>
+											<img src="<?php echo esc_url($image); ?>" alt="<?php echo esc_attr($name); ?>" class="absolute inset-0 w-full h-full object-cover">
+										<?php else: ?>
+											<img src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/default-image.jpg'); ?>" alt="Default Image" class="absolute inset-0 w-full h-full object-cover">
+										<?php endif; ?>
+										<div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent"></div>
+										<div class="absolute bottom-4 left-4 text-white">
+											<h3 class="text-lg font-semibold"><?php echo esc_html($name); ?></h3>
+											<p class="text-sm font-medium"><?php echo esc_html($position); ?></p>
+											<p class="text-xs opacity-80"><?php echo esc_html($year); ?> Member</p>
+										</div>
+									</div>
+								<?php endwhile; ?>
 							</div>
 						</div>
-					</div>
+					<?php else: ?>
+						<!-- Show a fallback message if no rows exist -->
+						<p>No slides available.</p>
+					<?php endif; ?>
 				</div>
 			</section>
 
