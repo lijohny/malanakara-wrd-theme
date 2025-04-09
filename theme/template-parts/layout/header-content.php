@@ -46,11 +46,17 @@
 	.nav-shadow .default-logo {
 		display: none; /* Hide default logo when scrolled */
 	}
+	#menu-header-menu li a{
+		color: black !important;
+	}
+	.nav-shadow #menu-header-menu li a{
+		color: white !important;
+	}
 </style>
 
 <header id="masthead" class="transition-all duration-300">
 	<div class="flex justify-between items-center w-full text-white">
-		<div class="container mx-auto px-24 py-2">
+		<div class="container mx-auto px-24 py-2 flex items-center gap-14">
 			<div>
 				<!-- Default Logo (Visible at top, hidden when scrolled) -->
 				<a href="<?php echo esc_url(home_url('/')); ?>" class="default-logo">
@@ -64,18 +70,13 @@
 			</div>
 
 			<div>
-			<?php
-wp_nav_menu(array(
-    'theme_location' => 'header-menu', // Now it matches
-    'container'      => 'nav',
-    'container_class'=> 'header-nav',
-    'menu_class'     => 'flex gap-4',
-    'fallback_cb'    => false
-));
-?>
-
-
-
+				<?php
+					wp_nav_menu([
+						'menu' => 'header-menu', // Use slug or ID
+						'container'     => false, // This removes the <nav> wrapper
+						'menu_class'    => 'flex gap-4', // Your desired <ul> class
+					]);
+				?>
 			</div>
 
 

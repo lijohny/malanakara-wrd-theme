@@ -10,16 +10,16 @@
 ?>
 <style>
 	.map iframe{
-		filter: invert(0.9) hue-rotate(40deg) contrast(1) saturate(0.8);
+		/* filter: invert(0.9) hue-rotate(40deg) contrast(1) saturate(0.8); */
 	}
 </style>
 
 <footer id="colophon">
 
-	<div class="bg-orange-200 rounded-t-4xl p-12 shadow-cyan-300 gap-14 flex justify-between items-start">
+	<div class="bg-[#d4e2d2] rounded-t-4xl p-12 shadow-cyan-300 gap-14 flex justify-between items-start">
 		<div>
 			<a href="<?php echo esc_url(home_url('/')); ?>">
-				<img class="w-[300px]" src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/stmarrys-logo.png'); ?>" alt="<?php bloginfo('name'); ?>">
+				<img class="w-[300px] bg-[#658161] logo-shadow-cstm px-5 py-2 rounded-lg" src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/stmarrys-logowhite.png'); ?>" alt="<?php bloginfo('name'); ?>">
 			</a>
 			<div class="mt-8">
 				<h3>
@@ -32,7 +32,7 @@
 					<svg class="w-6 h-6 text-[#DB4437]" fill="currentColor" viewBox="0 0 24 24">
 						<path d="M12 12.713l11.985-8.486A1 1 0 0 0 23 3H1a1 1 0 0 0-.985 1.227L12 12.713zm11.985-7.05L12 14.288 0 5.663V19a2 2 0 0 0 2 2h20a2 2 0 0 0 2-2V5.663z"/>
 					</svg>
-					<a href="mailto:kallamamst.marysmalankaracath@gmail.com" class="hover:text-[#DB4437] transition-colors">
+					<a href="mailto:kallamamst.marysmalankaracath@gmail.com" class="hover:text-[#1877F2] text-[#658161] transition-colors">
 						kallamamst.marysmalankaracath@gmail.com
 					</a>
 				</h4>
@@ -42,7 +42,7 @@
 					<svg class="w-6 h-6 text-[#34A853]" fill="currentColor" viewBox="0 0 24 24">
 						<path d="M6.62 10.79a15.72 15.72 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1-.27 11.72 11.72 0 0 0 3.7.6 1 1 0 0 1 1 1v3.68a1 1 0 0 1-1 1A19.75 19.75 0 0 1 2 4.27a1 1 0 0 1 1-1H6.7a1 1 0 0 1 1 1 11.72 11.72 0 0 0 .6 3.7 1 1 0 0 1-.27 1z"/>
 					</svg>
-					<a href="tel:04844851114" class="hover:text-[#34A853] transition-colors">
+					<a href="tel:04844851114" class="hover:text-[#1877F2] text-[#658161] transition-colors">
 						0484 485 1114
 					</a>
 				</h4>

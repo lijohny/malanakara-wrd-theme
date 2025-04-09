@@ -84,6 +84,16 @@ if ( ! function_exists( 'stmarys_setup' ) ) :
 				'footer-menu' => __( 'Footer Menu', 'st-marys' ),
 			)
 		);
+
+
+		// wp_nav_menu([
+		// 	'menu' => 'header-menu', // slug or ID
+		// 	'container' => 'nav',
+		// 	'container_class' => 'header-nav',
+		// 	'menu_class' => 'flex gap-4',
+		//   ]);
+		  
+		  
 		
 
 		// function register_custom_menus() {

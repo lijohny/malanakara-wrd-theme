@@ -172,6 +172,38 @@ get_header();
 				</div>
 			</section>
 
+			
+			<section>
+				<div class="container mx-auto px-24 text-center pt-34">
+					<table class="w-full border border-[#658161] text-center text-xl">
+						<thead class="bg-[#658161] text-white">
+						<tr>
+							<th class="border border-[#658161] p-8">Time</th>
+							<th class="border border-[#658161] p-8">Meal</th>
+							<th class="border border-[#658161] p-8">Notes</th>
+						</tr>
+						</thead>
+						<tbody>
+						<tr>
+							<td class="border border-[#658161] p-8">7:00 AM</td>
+							<td class="border border-[#658161] p-8">Breakfast</td>
+							<td class="border border-[#658161] p-8">Light & protein-rich</td>
+						</tr>
+						<tr>
+							<td class="border border-[#658161] p-8">12:30 PM</td>
+							<td class="border border-[#658161] p-8">Lunch</td>
+							<td class="border border-[#658161] p-8">Balanced meal</td>
+						</tr>
+						<tr>
+							<td class="border border-[#658161] p-8">8:00 PM</td>
+							<td class="border border-[#658161] p-8">Dinner</td>
+							<td class="border border-[#658161] p-8">Avoid high fat/sugar</td>
+						</tr>
+						</tbody>
+					</table>
+				</div>
+			</section>
+
 			<section class="mb-28 mt-28 z-10 relative h-[550px]">
 				<div class="container mx-auto px-24 text-center h-full">
 					<!-- Heading -->

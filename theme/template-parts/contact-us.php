@@ -20,7 +20,7 @@ get_header();
 			<div class="absolute top-0 left-0 w-full h-full bg-white opacity-15"></div>
 
 			<div class="container mx-auto px-24 flex justify-center items-center h-full relative z-50 !flex-col text-center">
-                <div class="shadow-lg rounded-lg p-10 w-full flex items-center flex-col">
+                <div class="shadow-custom rounded-lg p-10 w-full flex items-center flex-col">
                     <h2 class="text-3xl font-bold text-gray-900 mb-2">We would love to hear from You.</h2>
                     <p class="text-gray-600 text-md mb-6 w-1/2">
                         Count on our round-the-clock support to ensure uninterrupted operations, as our experts stand ready to assist you at any hour of the day.
